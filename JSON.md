@@ -34,3 +34,5 @@ console.log(myObject.key);
 ## Exercise
 Take the following JSON string, turn it into an object, then show the results.
 If you have time format the results to show individual keys and their values.
+
+    '{"type": "pizza","toppings":["cheese","tomatoe"],"size":15,"crust":"stuffed","base":"deep pan"}'
