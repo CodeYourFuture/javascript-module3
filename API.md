@@ -68,7 +68,7 @@ https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-1634
 1. Call http://www.mocky.io/v2/584c3d2d1200001b1e372b01 and display the contents of 'data'
 
 1. Call https://jsonplaceholder.typicode.com/posts and display the title of the posts.
-    Using the 'id' field in the posts, when a user clicks on a title, make a second request to https://jsonplaceholder.typicode.com/posts/<id> (where <id> is the number from the post), and display the body and the title of the post (from the response)
+    Using the 'id' field in the posts, when a user clicks on a title, make a second request to `https://jsonplaceholder.typicode.com/posts/<id>` (where `<id>` is the number from the post), and display the body and the title of the post (from the response)
 
 
 ## Extra
