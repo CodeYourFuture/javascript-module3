@@ -18,6 +18,8 @@ To get the data from a specific area, replace `<AREA>` in the below URL, with th
 For example, to get the data for 'All', the URL becomes: `https://code-your-future.github.io/api-demo/area/All/index.json`
 
 
+It would also be good to see, when a button is pressed and the results shown, if you click the same button again, the results are hidden.
+Also if you click another button, it hides the results shown, and shows the new results
 
 
 ## Preparation for next week
