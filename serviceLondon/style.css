@@ -1,4 +1,36 @@
 /* define the style */
 body{
+	margin: 2% auto;
+}
 
+.mainContainer {
+	width: 60%;
+	height: 100%;
+	position: absolute;
+	margin-left: 20%;
+	border:1px solid green;
 } 
+.header{
+	width: 100%;
+	height: 50px;
+	padding:1px;
+	background-color: gray; 
+}
+.sideMenu{
+	float: left;
+	position: relative;
+	margin-top: 10px;
+	margin-right: 20px;
+	margin-left: 10px;
+	border:1px solid #000;
+	width: 200px;
+	height: 300px; 
+}
+.content{
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+	border:1px solid #000;
+	width: 540px;
+	height: 70%;
+}
