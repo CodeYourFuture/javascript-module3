@@ -1,20 +1,19 @@
 /* define the style */
 body{
-	margin: 2% auto;
+	margin:2% auto; 
 }
-
 .mainContainer {
 	width: 60%;
 	height: 100%;
 	position: absolute;
 	margin-left: 20%;
-	border:1px solid green;
+	border:1px solid #82a6f2;
 } 
 .header{
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	padding:1px;
-	background-color: gray; 
+	background-color: #82a6f2; 
 }
 .sideMenu{
 	float: left;
@@ -25,6 +24,7 @@ body{
 	border:1px solid #000;
 	width: 200px;
 	height: 300px; 
+	border-radius: 12px;
 }
 .content{
 	float: left;
@@ -33,4 +33,33 @@ body{
 	border:1px solid #000;
 	width: 540px;
 	height: 70%;
+	border-radius: 12px;
+}
+p{
+	font: bold 2.2em/5px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.button {
+	display: block; /*turn the link text to larger box*/
+	height: 30px;
+	width: 160px;
+	background: #34694f;
+	margin: 10px 5px 5px 10px;
+	border: 2px solid rgba(33, 68, 72, 1.59);
+	/*text styles*/
+	color: rgba(0, 0, 0, 1.55);
+	text-align: center;
+	font: bold 1.2em/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+
+}
+/*Step 3: Link Styling*/
+a.button {
+	text-decoration: none;
+}
+a:active {
+	background: #35485d;
+}
+
+.resultPreview{
+
 }
