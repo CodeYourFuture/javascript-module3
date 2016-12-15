@@ -1,0 +1,27 @@
+body {
+	background-color: #ffffe6;
+}
+h1 {
+	font-family: 'Kavoon', cursive;
+	/*font-family: 'Oleo Script Swash Caps', cursive;*/
+	/*font-family: 'Galada', cursive;*/
+	/*font-family: 'Monofett', cursive;*/
+	/*font-family: 'Akronim', cursive;*/
+	font-size: 2.5em;
+	text-align: center;
+	color: #00004d;
+}
+
+#info {
+	margin: 25px auto;
+	border: 2px solid #005cb3;
+	background-color: #cce6ff;
+	border-radius: 25px;
+	width: 60%;
+	padding: 25px;
+	font-size: 1.8em;
+	color: #000033;
+}
+.btnArea {
+	color: red;
+}
