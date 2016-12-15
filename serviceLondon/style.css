@@ -2,64 +2,105 @@
 body{
 	margin:2% auto; 
 }
+
 .mainContainer {
 	width: 60%;
-	height: 100%;
-	position: absolute;
 	margin-left: 20%;
-	border:1px solid #82a6f2;
-} 
+	overflow: hidden;
+
+}
+
 .header{
 	width: 100%;
 	height: 60px;
 	padding:1px;
-	background-color: #82a6f2; 
+	background-color: #0b0249;
 }
-.sideMenu{
+
+section.sideMenu {
 	float: left;
-	position: relative;
-	margin-top: 10px;
-	margin-right: 20px;
-	margin-left: 10px;
-	border:1px solid #000;
+	margin: 10px 10px 10px 10px;
 	width: 200px;
-	height: 300px; 
 	border-radius: 12px;
 }
-.content{
+.innerHeader{
+	background-color: #0b0249;
+	color: white;
+	height: 40px;
+	text-align: center;
+	padding-top: 1px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px; 
+
+}
+section.content{
 	float: left;
-	margin-top: 10px;
-	margin-right: 10px;
-	border:1px solid #000;
-	width: 540px;
-	height: 70%;
-	border-radius: 12px;
+	margin: 10px 10px 10px 10px;
+	border:0px solid #000;
+	width: 500px;
+	height: 2%;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px; 
 }
+footer {
+	clear: both;
+	width: 100%;
+	height: 50px;
+	background-color: #0b0249;
+}
+
 p{
-	font: bold 2.2em/5px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: bold 2.2em/2px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: white;
+}
+.resultBox{
+	width: 200px;
+	height: 200px;
+    padding-top: 10px; 
+    -webkit-box-shadow: 0 1px 2px #777;
+	-moz-box-shadow: 0 2px 1px #777;
+	box-shadow: 0 2px 1px #777;
 }
 
 .button {
-	display: block; /*turn the link text to larger box*/
-	height: 30px;
-	width: 160px;
-	background: #34694f;
-	margin: 10px 5px 5px 10px;
-	border: 2px solid rgba(33, 68, 72, 1.59);
-	/*text styles*/
-	color: rgba(0, 0, 0, 1.55);
+	display: block;
+	height: 25px;
+	width: 190px;
+	margin: 5px 5px 5px 5px;
+	background: #34696f;
+	border: 1px solid rgba(33, 68, 72, 0.59);
+	
+	color: rgba(0, 0, 0, 0.55);
 	text-align: center;
-	font: bold 1.2em/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-
+	font: bold 1.2em/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+		
 }
-/*Step 3: Link Styling*/
+ 
 a.button {
 	text-decoration: none;
 }
-a:active {
-	background: #35485d;
+a:active{
+	background-color: #080887;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-.resultPreview{
+li {
+    float: left;
+}
 
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
 }
