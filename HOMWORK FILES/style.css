@@ -1,4 +1,106 @@
 #pic {
-  height: 400px;
+  width: 80%;
+  margin: 40px auto;
   border: 2px red solid;
+}
+#pop-ups {
+  position: relative;
+  top: -524px;
+  left: 230px;
+}
+
+#pop-ups button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#sub-pop-ups button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+}
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#btn-All {
+  position: relative;
+  left: 380px;
+  top: -44px;
+
+}
+#btn-South-East {
+  top: 250px;
+  position: relative;
+  left: 250px;
+}
+#btn-North {
+  position: relative;
+  top: -250px;
+  left: -100px;
+}
+#btn-West{
+  position: relative;
+  left: -160px;
+}
+#btn-Central {
+  position: relative;
+  left: 380px;
+}
+#btn-Central-and-South {
+    position: relative;
+    top: 120px;
+    left: 194px;
+}
+#btn-East {
+  position: relative;
+  left: 320px;
+}
+#btn-City-of-London {
+  position: relative;
+  top: 30px;
+  left: -200px;
+}
+#btn-South {
+    position: relative;
+    top: 250px;
+    left: -190px;
+}
+#btn-Kalayaan {
+  position: relative;
+  top: -15px;
+}
+#btn-Haringey\ Law\ Centre {
+    position: relative;
+    top: -808px;
+    left: 346px;
+}
+#btn-Haringey\ Migrant\ Service {
+    position: relative;
+    top: -851px;
+    left: 192px;
+}
+#btn-Barnet\ Refugee\ Service {
+    position: relative;
+    top: -847px;
+    left: 201px;
+}
+#btn-Haringey\ Migrant\ Support\ Centre {
+    position: relative;
+    top: -808px;
+    left: -46px;
+}
+#btn-Latin\ American\ House {
+    position: relative;
+    top: -766px;
+    left: -430px;
 }
