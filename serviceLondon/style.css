@@ -86,7 +86,7 @@ header p{
 	height: 25px;
 	width: 190px;
 	margin: 5px 5px 5px 5px;
-	background: #1887e2;;
+	background: #1887e2;
 	border: 1px solid rgba(33, 68, 72, 0.59);
 	color: rgba(0, 0, 0, 0.80);
 	text-align: center;
@@ -101,14 +101,14 @@ a.button {
 	text-decoration: none;
 }
 a:active{
-	background-color: #080887;
+	background-color: #d9f066;
 }
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color:#1887e2
 }
 
 li {

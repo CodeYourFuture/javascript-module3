@@ -61,8 +61,11 @@ function requestData(request,sourceUrl){
 /* populate button when the service button is clicked */
 
 document.getElementById('service').addEventListener('click',function(e){
+	
+	var resultParent=document.getElementsByClassName('resultBox');
 	var mainUrl=url+"/index.json";
 	requestData(request,mainUrl);
+
 },false);
 
 document.getElementById('serviceMenu').addEventListener('click',function(e){
