@@ -1,26 +1,73 @@
-	var immigration = document.getElementById("immigrationBlurb");
+	
+	var immigration = document.getElementById("container");
 	var btn = document.getElementById("btn");
+	var link="https://code-your-future.github.io/api-demo/area/";
+	var currentOption=false;
 
-	btn.addEventListener("click", function() {
+	function requestData(dataSource){
+
 		var ourRequest = new XMLHttpRequest();
-		ourRequest.open('GET', 'https://code-your-future.github.io/api-demo/area/index.json', true);
 		
+		ourRequest.open('GET', dataSource, true);
 		ourRequest.onload = function () {
-		var ourData = JSON.parse(ourRequest.responseText);
-		//console.log(ourData.data[1]); loads second item in array "Central"
-		renderHTML(ourData);
-		};
-	ourRequest.send();
-	});
 
+			//if (request.status >= 200 && request.status < 400) {
+		var ourData = JSON.parse(ourRequest.responseText);
+		//if the operation is true run renderhtml()
+		if(!currentOption){
+			renderHTML(ourData);
+		}
+		else{ 
+
+			for (var i = 0; i<ourData.data.length; i++) {
+				
+				//for (var j = 0; j<ourData.data[i].length; j++) {
+					for(key in ourData.data[i]){
+						//console.log(ourData.data[i][key]);
+						//document.write(ourData.data[i][key])
+						var keyInfo = (ourData.data[i]);
+						//I want to harvest the index item ie website, area, telephone..etc
+						//console.log(ourData.data[i]);
+						var displayInfo = (ourData.data[i][key]);
+						console.log(displayInfo);
+				}
+		}
+
+		}
+			
+
+		};
+		ourRequest.send();
+		
+	}
+	
 	function renderHTML(data) {
 		var htmlString = "";
 		for (i = 0; i < data.data.length; i++) {
-			htmlString+= "<p>" + data.data[i] + " is all the service providers in the " + data.data[i] + ".</p>";
-			console.log (htmlString);
+			//htmlString+= "<a href='" + link + data.data[i] + "/index.json'>" + data.data[i]+"</a><br>"; //Change it to button
+			htmlString+= "<a href='#' alt='" + link + data.data[i] + "/index.json'>" + data.data[i]+"</a><br>"; 
+			//console.log (htmlString);
 		}
-		immigrationBlurb.insertAdjacentHTML('beforeend', htmlString);
+		immigration.innerHTML=htmlString;
+		//container.insertAdjacentHTML('beforeend', htmlString);
 	}
+
+	btn.addEventListener("click", function() {
+		requestData(link+"/index.json");
+	})
+
+	document.getElementById('container').addEventListener('click',function(q){
+			if(q.target.tagName==='A'){
+				//console.log(q.target.getAttribute('alt'));
+				currentOption=true;
+				requestData(q.target.getAttribute('alt'));
+
+			}
+
+	},false)
+	
+
+
 	/* I am not sure how to do the rest. I can't understand how to get the other url 
 		to work so I can assign a button to call the JSON data. I am going to continue to 
 		try to understand it*/

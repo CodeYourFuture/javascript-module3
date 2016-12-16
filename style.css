@@ -1,21 +1,9 @@
-html, body {
-  padding: 0;
-  margin: 0;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 2.4em;
-  font-weight: normal;
-  display: inline-block;
-}
-
 body {
   font-family: Helvetica, sans-serif;
   padding: 50px 10%;
 }
 
-button {
+#btn {
   background-color: #046380;
   color: #FFF;
   border: none;
@@ -24,16 +12,11 @@ button {
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-  box-shadow: 2px 2px 0 #034154;
   margin-bottom: 10px;
-  margin-left: 18px;
   position: relative;
   top: -10px;
 }
 
-button:hover {
-  background-color: #034F66;
-}
 
 button:active {
   background-color: #034154;
