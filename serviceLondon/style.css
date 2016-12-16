@@ -33,7 +33,7 @@ section.sideMenu {
 	border-top-right-radius: 6px; 
 
 }
-section.content{
+#content{
 	float: left;
 	margin: 10px 10px 10px 10px;
 	border:0px solid #000;
@@ -48,15 +48,20 @@ footer {
 	height: 50px;
 	background-color: #0b0249;
 }
-
+h5{
+	padding: 10px 5px 10px 10px;
+	color: red;	
+}
 p{
 	font: bold 2.2em/2px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: white;
 }
 .resultBox{
-	width: 200px;
-	height: 200px;
-    padding-top: 10px; 
+	margin: 1px 1px 10px 10px
+	
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+
     -webkit-box-shadow: 0 1px 2px #777;
 	-moz-box-shadow: 0 2px 1px #777;
 	box-shadow: 0 2px 1px #777;
@@ -67,13 +72,15 @@ p{
 	height: 25px;
 	width: 190px;
 	margin: 5px 5px 5px 5px;
-	background: #34696f;
+	background: #1887e2;;
 	border: 1px solid rgba(33, 68, 72, 0.59);
-	
-	color: rgba(0, 0, 0, 0.55);
+	color: rgba(0, 0, 0, 0.80);
 	text-align: center;
 	font: bold 1.2em/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-		
+	border-top-left-radius:8px; 
+	border-top-right-radius:8px; 
+	border-bottom-left-radius:2px;
+	border-bottom-right-radius:2px; 
 }
  
 a.button {
