@@ -5,18 +5,22 @@ var flag=0;
 
 function postResult(resultData)	{
 	var parentContainer=document.getElementById('content');
-	var output;
-	var resultContenter;
+	var output='';
+	var resultContenter='';
+	var orgName='No name';
 	
 	for(var i=0;i<resultData.data.length;i++){
-		
+		output='';
 		for(key in resultData.data[i]){
-			output+= "<h5>" + key + " : " +resultData.data[i][key] + 
-					"</h5>";
-		}
-		resultContenter+="<div class='resultBox'>" + output + "</div>"
-		output=null;
+			
+			if(key==='organisation')
+				orgName=resultData.data[i][key];
 
+			output+= "<p class='pStyle'><span>" + key.charAt(0).toUpperCase() +
+					key.substr(1) + "</span> : " +resultData.data[i][key] + 
+					"</p>";
+		}
+		resultContenter+="<div class='resultBox'><header class='resultHeader'><p>" + orgName + "</p></header>" + output + "</div>"
 	}
 
 	parentContainer.innerHTML=resultContenter;
