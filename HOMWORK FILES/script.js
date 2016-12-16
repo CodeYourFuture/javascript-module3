@@ -16,15 +16,46 @@ function createButtons() {
   http.onreadystatechange = function() {
     if(this.readyState === 4 && this.status === 200) {
       var myData = JSON.parse(http.responseText);
+
       var buttons = '';
+      var searchBar = document.getElementById('search');
+
       for(var i=0; i<myData.data.length; i++) {
           buttons = '<button id="btn-' + myData.data[i] + '" type=\"button\" onClick=createSubButtons("' + myData.data[i] + '")>' + myData.data[i] + '</button>';
         document.getElementById('pop-ups').innerHTML += buttons;
       }
+      // live search
+      for(var i=0; i<myData.data.length; i++) {
+        if(myData.data[i].toLowerCase().search(searchBar.value.toLowerCase()) !== -1) {
+          console.log(searchBar.value);
+        } // if ends
+      }// for ends
     }
   }
   http.send();
 }
+function reqSearch() {
+
+  var http = new XMLHttpRequest;
+  http.open('GET', "https://code-your-future.github.io/api-demo/area/index.json");
+  http.onreadystatechange = function() {
+    if(this.readyState === 4 && this.status === 200) {
+      var myData = JSON.parse(http.responseText);
+
+
+      var searchBar = document.getElementById('search');
+      // live search
+      for(var i=0; i<myData.data.length; i++) {
+        if(myData.data[i].toLowerCase().search(searchBar.value.toLowerCase()) !== -1) {
+          console.log(searchBar.value);
+          createSubButtons(myData.data[i]);
+        } // if ends
+      }// for ends
+    }
+  }
+  http.send();
+}
+
 
 function createSubButtons(areaName) {
   var http = new XMLHttpRequest;
