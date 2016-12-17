@@ -10,18 +10,18 @@ function getData(url) {
 		// status === 200  means the request was OK
 		if (this.readyState === 4 && this.status === 200) {
 			if (first) {
-				logThis(this.responseText);// The body returned by the server (as a string)
+				logAreas(this.responseText);// The body returned by the server (as a string)
 				first = false;
 			}else {
-				logThat(this.responseText);
+				logAreaInfo(this.responseText);
 			};
 		};
+		loadingFinished();
 	};
 	http.send(); // Make the request
 };
-function logThis(jsonString) {
+function logAreas(jsonString) {
 	var myObject = JSON.parse(jsonString);
-	console.log(myObject);
 	for (var key in myObject) {
 		for (var i in myObject[key]) {
 			createBtn([myObject[key][i]]);
@@ -29,16 +29,15 @@ function logThis(jsonString) {
 	};
 	addingEvents();
 };
-function logThat(jsonString) {
-	createDiv();
-	document.getElementById('info').innerHTML = '';
+function logAreaInfo(jsonString) {
 	var myObject = JSON.parse(jsonString);
-	console.log(myObject);
+	var counter = 0;
 	for (var i in myObject['data']) {
+		createDiv('info');
 		for (var j in myObject['data'][i]) {
-			document.getElementById('info').innerHTML += ([j] + ':  ' + myObject['data'][i][j] + '</br>');
+			document.getElementsByClassName('info')[counter].innerHTML += ('<p>' + '<strong>' + [j] + ':  ' + '</strong>'  + myObject['data'][i][j] + '</p>' );
 		};
-		document.getElementById('info').innerHTML += '</br>' + '--------------' + '</br>';
+		counter++;
 	};
 };
 function createBtn(textNode) {
@@ -48,28 +47,58 @@ function createBtn(textNode) {
 	var attr = document.createAttribute("class")
 	attr.value = "btnArea";
 	btn.setAttributeNode(attr);
-	divContainer.appendChild(btn);
+	attr = document.createAttribute("type")
+	attr.value = "button";
+	btn.setAttributeNode(attr);
+	document.getElementById("buttons").appendChild(btn);
 	// var x = document.getElementById("container");
 	// for (var i = 0; i < 1; i++) {
 	// 	x.innerHTML += '<button type="button" class="btn" onclick="logThis()">' + textNode + '</button>';
 	// }
 };
-function createDiv() {
+function createDiv(className) {
 	var div = document.createElement("DIV");
-	var attr = document.createAttribute("id")
-	attr.value = "info";
+	var attr = document.createAttribute("class")
+	attr.value = className;
 	div.setAttributeNode(attr);
-	divContainer.appendChild(div);
+	document.getElementById("content").appendChild(div);
 };
-function addingEvents() {
-	var btn = document.getElementsByTagName('button');
-	for (var i = 0; i < btn.length; i++) {
-		btn[i].addEventListener('click',info);
+function removeDiv(className) {
+	var child = document.getElementsByClassName(className);
+	var parent = document.getElementById("content");
+	/* didn't work
+	for (var i = child.length; i >0; i--) {
+	 	parent.removeChild(child[i]);
+	};
+	*/
+	while (child.length > 0) {
+		parent.removeChild(child[0]);
 	};
 };
-function info() {
+function addingEvents() {
+	var btn = document.getElementsByClassName('btnArea');
+	for (var i = 0; i < btn.length; i++) {
+		btn[i].addEventListener('click',getAreaInfo);
+	};
+};
+function getAreaInfo() {
+	startLoading();
+	removeDiv('info');
 	var t = this.innerHTML;
 	var url = 'https://code-your-future.github.io/api-demo/area/' + t + '/index.json';
 	getData('https://code-your-future.github.io/api-demo/area/' + t + '/index.json');
 };
-getData('https://code-your-future.github.io/api-demo/area/index.json');
+window.onload = function () {
+	startLoading();
+	getData('https://code-your-future.github.io/api-demo/area/index.json');
+};
+function loadingFinished() {
+	var elem = document.getElementById('loading');
+	elem.style.visibility = 'hidden';
+	elem.style.transitionDuration = '0.4s';
+};
+function startLoading() {
+	var elem = document.getElementById('loading');
+	elem.style.visibility = 'visible';
+	elem.style.transitionDuration = '0s';
+};
