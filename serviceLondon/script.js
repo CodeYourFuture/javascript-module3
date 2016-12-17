@@ -2,9 +2,9 @@
 var request;
 var url="https://code-your-future.github.io/api-demo/area/";
 var flag;
-
+/** Hide the list of service section when the page load*/
 window.onload = showHide('none');
-
+/** Make hide / show the list of service */
 function showHide(visibility){
 	var elements =document.querySelectorAll('.sideMenu');
 	elements = elements.length ? elements : [elements];
@@ -14,6 +14,7 @@ function showHide(visibility){
   	}
 }
 
+/** Receive the data loead to the page result section */
 function postResult(resultData)	{
 	var parentContainer=document.getElementById('content');
 	var output='';
@@ -35,7 +36,7 @@ function postResult(resultData)	{
 	}
 	
 }
-
+/** Receive the data from the data source and load to the page */
 function dataManager(serverData) {
 	var output='';
 	if(!flag){
@@ -48,7 +49,7 @@ function dataManager(serverData) {
 	}else
 		postResult(serverData);	
 }
-
+/** Request the data from the data source */
 function requestData(request,sourceUrl){
 	
 	if (window.XMLHttpRequest) {
@@ -70,6 +71,7 @@ function requestData(request,sourceUrl){
 	request.send();
 	
 }
+
 /**Loading while requesting data from the server*/
 
 function loading(display){
@@ -99,6 +101,7 @@ document.getElementById('service').addEventListener('click',function(e){
 
 },false);
 
+/* Make request and populate the data in each site*/
 document.getElementById('serviceMenu').addEventListener('click',function(e){
 	if(e.target.tagName==='A'){
 		request=null;
