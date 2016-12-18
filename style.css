@@ -11,9 +11,6 @@ h1 {
 	text-align: center;
 	color: #00004d;
 }
-#container {
-	width: 90%;
-}
 #loading {
 	text-align: center;
 	font-size: 1.5em;
@@ -49,5 +46,28 @@ h1 {
 	padding: 25px;
 	font-size: 1.8em;
 	color: #000033;
+	word-wrap: break-word;
+	/*text-overflow: string;*/
+	/*white-space: normal;*/
+	/*overflow: hidden;*/
 }
-
+@media screen and (max-width: 321px) {
+	body {
+		font-size: 75%;
+	}
+	.info {
+		width: auto;
+	}
+	.btnArea {
+	display: block;
+	width: 100%;
+	}
+}
+/*@media screen and (max-width: 1016px) and (min-width: 322px) {
+	body {
+		font-size: 75%
+	}
+	.info {
+    	width: 100%;
+    }
+}*/
