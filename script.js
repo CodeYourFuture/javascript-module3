@@ -1,6 +1,9 @@
-var divContainer = document.getElementById("container");
-var first = true;
-function getData(url) {
+window.onload = function () {
+	startLoading();
+	getData('https://code-your-future.github.io/api-demo/area/index.json',logAreas);
+};
+function getData(url,displaycallback) {
+	var jsonString;
 	var http = new XMLHttpRequest();
 	// Specify the Method and the URL we want to access
 	http.open('GET', url);
@@ -9,14 +12,9 @@ function getData(url) {
 		// readyState === 4 means the request has finished (http://www.w3schools.com/xml/ajax_xmlhttprequest_response.asp)
 		// status === 200  means the request was OK
 		if (this.readyState === 4 && this.status === 200) {
-			if (first) {
-				logAreas(this.responseText);// The body returned by the server (as a string)
-				first = false;
-			}else {
-				logAreaInfo(this.responseText);
-			};
+			displaycallback(this.responseText);
+			loadingFinished();
 		};
-		loadingFinished();
 	};
 	http.send(); // Make the request
 };
@@ -86,11 +84,8 @@ function getAreaInfo() {
 	removeDiv('info');
 	var t = this.innerHTML;
 	var url = 'https://code-your-future.github.io/api-demo/area/' + t + '/index.json';
-	getData('https://code-your-future.github.io/api-demo/area/' + t + '/index.json');
-};
-window.onload = function () {
-	startLoading();
-	getData('https://code-your-future.github.io/api-demo/area/index.json');
+	// getData('https://code-your-future.github.io/api-demo/area/' + t + '/index.json');
+	getData('https://code-your-future.github.io/api-demo/area/' + t + '/index.json',logAreaInfo);
 };
 function loadingFinished() {
 	var elem = document.getElementById('loading');
