@@ -37,30 +37,62 @@ function postResult(resultData)	{
 	
 }
 /** Receive the data from the data source and load to the page */
-function dataManager(serverData) {
+function dataManager(sourceUrl) {
 	var output='';
-	if(!flag){
-		for (key in serverData.data) {
-			output +='<a href ="#" data-src="' + url +serverData.data[key]+'/index.json" class="button">' + serverData.data[key] + '</a>';
-		}
-		var parentElement=document.getElementById('serviceMenu')
-		parentElement.innerHTML = output;
-		flag=1;
-	}else
-		postResult(serverData);	
-}
-/** Request the data from the data source */
-function requestData(request,sourceUrl){
-	
-	if (window.XMLHttpRequest) {
-		request=new XMLHttpRequest();
-	} 
+	var serverData =requestData(sourceUrl);
 
-	request.open('GET', sourceUrl);
+	serverData.then(function(returnData){
+		//console.log(data);
+		var jsonData=JSON.parse(returnData);
+		if(!flag){		
+		
+			jsonData.data.forEach(function(val){
+			output +='<a href ="#" data-src="' + url +val+'/index.json" class="button">' + val + '</a>';
+			})
+			
+			var parentElement=document.getElementById('serviceMenu')
+			parentElement.innerHTML = output;
+			flag=1;
+		}else
+			postResult(jsonData);	
+			
+
+	}).catch(function(err){
+		console.log("ops error : " + err);
+	})
 	
-	loading('block');
+}
+
+/** Request the data from the data source */
+
+function requestData(Url){
+	
+	return new Promise(function(resolve, reject){
+		var request=new XMLHttpRequest();
+		request.open('GET',Url,true);
+
+		request.onload=function(){
+			if (request.status === 200){
+				resolve(request.response);
+			}else{
+				reject(Error(request.statusText));
+			}
+		};
+
+		request.onerror=function(){
+			reject(Error("Network Error"));
+		};
+
+		request.send();
+
+	});
+	
+}
+	
+/*	
+	//loading('block');
 	request.onreadystatechange = function() {
-		if ((request.status === 200) &&
+		 &&
 			(request.readyState === 4)) {
 
 				data = JSON.parse(request.responseText);
@@ -70,7 +102,7 @@ function requestData(request,sourceUrl){
 	} 
 	request.send();
 	
-}
+}*/
 
 /**Loading while requesting data from the server*/
 
@@ -91,16 +123,16 @@ function loading(display){
 }
 
 /* populate button when the service button is clicked */
-
+/*
 document.getElementById('service').addEventListener('click',function(e){
 	flag=0;
 	
-	var mainUrl=url+"/index.json";
-	requestData(request,mainUrl);
+	var mainUrl=url+"index.json";
+	dataManager(mainUrl);
 	showHide('block');
 
 },false);
-
+*/
 /* Make request and populate the data in each site*/
 document.getElementById('serviceMenu').addEventListener('click',function(e){
 	if(e.target.tagName==='A'){

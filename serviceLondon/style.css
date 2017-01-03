@@ -2,21 +2,35 @@
 /* define the style */
 body{
 	margin:2% auto; 
+	background-color: #645BDB;
 }
 
 .mainContainer {
-	width: 60%;
-	margin-left: 20%;
+	width: 80%;
+	margin-left: 10%;
 	overflow: hidden;
+	background-color: #F6F6F7;
+	border-top-right-radius: 1em;
+	border-top-left-radius: 1em;
+
 }
 
 .header{
 	width: 100%;
 	height: 60px;
 	padding:1px;
-	background-color: #0b0249;
+	
 }
 
+.searchPanel{
+	width: 500px;
+	height: 300px;
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border:2px solid gray;
+}
+/*
 section.sideMenu {
 	float: left;
 	margin: 10px 10px 10px 10px;
@@ -44,6 +58,7 @@ section.sideMenu {
 	margin: 10px 5px 10px 10px;
 	width: 550px;
 }
+*/
 
 footer {
 	clear: both;
@@ -75,7 +90,7 @@ span{
 header p{
 	font-family: "Coda Caption";
 	font-size: 24px;
-	color: white;
+	color: black;
 	font-weight: bold;
 	margin-left: 10px;
 }
@@ -116,7 +131,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:#1887e2
+    /*background-color: #645BDB;*/
 }
 
 li {
@@ -125,9 +140,9 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: black;
     font-family: "Coda Caption";
-	font-size: 18px;
+	font-size: 15px;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
