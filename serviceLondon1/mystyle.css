@@ -30,7 +30,7 @@ body {
 }
 
 form {
-	width: 450px;
+	width: 600px;
 	margin: 0 auto;
 	position: relative;
 	top: 50px;
@@ -61,7 +61,6 @@ ol {
 	padding: 0;
 }
 legend{
-
 	font: bold 14px "Lucida Grande", Lucida, Verdana, sans-serif;
 	text-shadow: 0 1px 0px #FFF;
 }
@@ -109,10 +108,11 @@ ol li input[type="text"]{
 		
 }
 fieldset{
-	display: block;
-	margin-top: 40px;
+	display: inline-block;
+	margin-top: 10px;
 	font: bold 14px "Lucida Grande", Lucida, Verdana, sans-serif;
 	text-shadow: 0 1px 0px #FFF;
 	border-bottom: 1px solid rgb(76, 67, 65);
-	width: 80%;
+	width: 550px;
 }
+

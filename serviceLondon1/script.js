@@ -1,10 +1,10 @@
+
 // Hide search result panel when the page load 
 window.onload = resultPanel('none');
 
 function resultPanel(display){
 	const	resultPanel=document.getElementById('searchResult');
-			resultPanel.style.display=display;
-	
+			resultPanel.style.display=display;	
 }
 
 document.mainForm.chooseType.onchange = function(evt){
@@ -23,7 +23,6 @@ function getSearchParameter(evt){
 		return selectedValue + '/' + evt.target.value;
 	}			
 }
-
 
 function*generateor(url,evt){
 	const txtSearch=document.getElementById('search');
@@ -44,7 +43,6 @@ function excute(generator){
 		const anotherPromise=anotherIterator.value
 		anotherPromise.then(post =>iterator.next(post))
 	})
-	
 }
 
 function populateData(service,evt){	
@@ -57,11 +55,37 @@ function populateData(service,evt){
 			dataList.appendChild(option);		
 		})
 	}else{
-		service.forEach(items => {
-			console.log(service);
-		})	
+		displaySearchResult(service);
 		resultPanel('block');
 	}
+}
+
+function displaySearchResult(service){
+	var parentContainer=document.getElementById('searchResult');
+	let output='',
+		resultContenter='',
+		orgName='',
+		totalResult = 0;
+	
+	service.forEach(items => {
+		totalResult++;
+		for(key in items){
+			if(key==='organisation' || key==='Organisation' )
+				orgName=items[key];
+			output+= "<p> <span>" + key.charAt(0).toUpperCase() +
+					key.substr(1) + "</span> : " + getItemsValue(items, key) + "</p>";
+		}
+		resultContenter+="<fieldset> <legend>"+ orgName+"</legend>"+output +"</fieldset>";
+		output='';
+	})	
+	parentContainer.innerHTML="<legend>Search Result [ " + totalResult +"]</legend>" + resultContenter;
+}		
+
+function getItemsValue(items,key){
+	if(key==='Website' || key==='website')
+		return "<a target='blank' href='"+items[key]+ "'>" + items[key] + "</a>"
+	else
+		return items[key];
 }
 
 function removeChildElement(datalist){
