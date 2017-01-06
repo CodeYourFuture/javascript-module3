@@ -17,6 +17,7 @@ form * {
 	zoom: 1; 
 }
 body {
+	margin: 0 auto;
 	height: 500px;
 	background: #42826C;
 	background: #42826C -webkit-linear-gradient(#002F32,#42826C) no-repeat;
@@ -96,6 +97,9 @@ fieldset{
 	text-shadow: 0 1px 0px #FFF;
 	border-bottom: 1px solid rgb(76, 67, 65);
 	width: 550px;
+}
+.nav{
+
 }
 .nav ul{
 	display: block;	
