@@ -17,7 +17,6 @@ form * {
 	zoom: 1; 
 }
 body {
-	margin: 0 auto;
 	height: 500px;
 	background: #42826C;
 	background: #42826C -webkit-linear-gradient(#002F32,#42826C) no-repeat;
@@ -98,14 +97,13 @@ fieldset{
 	border-bottom: 1px solid rgb(76, 67, 65);
 	width: 550px;
 }
-.nav{
 
-}
 .nav ul{
 	display: block;	
+	width: 600px;
 	margin:0 auto;
 	margin-top: 50px;
-	max-width: 680px;
+	/*max-width: 680px;*/
 	padding: 0;
 	padding-left: 20px;
 }
