@@ -10,7 +10,7 @@ function resultPanel(display){
 document.mainForm.chooseType.onchange = function(evt){
 	if(evt.target.selectedIndex != 0){ 
 		let url='https://code-your-future.github.io/api-demo/' + getSearchParameter(evt) + '/index.json';		
-		excute(generateor(url,evt));
+		excute(generator(url,evt));
 	}
 }
 
@@ -24,7 +24,7 @@ function getSearchParameter(evt){
 	}			
 }
 
-function*generateor(url,evt){
+function*generator(url,evt){
 	const txtSearch=document.getElementById('search');
 	const response=yield fetch(url);
 	const post=yield response.json();// it return promise and yield it 
@@ -103,9 +103,7 @@ document.mainForm.searchField.onkeypress= function(evt){
 	if(evt.keyCode===13){
 		evt.preventDefault();
 		let url='https://code-your-future.github.io/api-demo/' + getSearchParameter(evt) + '/index.json';		
-		excute(generateor(url,evt));
-		
-		//alert(getSearchOption(evt));		
+		excute(generator(url,evt));
 	}
 }
 

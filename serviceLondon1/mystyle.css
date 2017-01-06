@@ -96,10 +96,9 @@ fieldset{
 	text-shadow: 0 1px 0px #FFF;
 	border-bottom: 1px solid rgb(76, 67, 65);
 	width: 550px;
+	-webkit-border-radius: 10px;
 }
-.nav{
-	position: relative;
-}
+
 .nav ul{
 	display: block;	
 	width: 600px;
