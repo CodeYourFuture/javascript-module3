@@ -98,8 +98,7 @@ fieldset{
 	width: 550px;
 }
 .nav ul{
-	display: block;
-	
+	display: block;	
 	margin:0 auto;
 	margin-top: 50px;
 	max-width: 680px;
@@ -110,7 +109,6 @@ fieldset{
 	list-style: none;
 	display: inline-block;
 	padding: 5px 10px;
-	margin-right: 5px;
 	color: #FFF;
 	font: bold 14px "Lucida Grande", Lucida, Verdana, sans-serif;
 	background: #93481A;
