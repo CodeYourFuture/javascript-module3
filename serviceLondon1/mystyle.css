@@ -103,9 +103,8 @@ fieldset{
 	width: 600px;
 	margin:0 auto;
 	margin-top: 50px;
-	/*max-width: 680px;*/
 	padding: 0;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 .nav li{
 	list-style: none;
