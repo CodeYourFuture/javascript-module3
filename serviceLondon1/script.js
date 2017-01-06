@@ -46,6 +46,7 @@ function excute(generator){
 }
 
 function populateData(service,evt){	
+
 	if(evt.target.tagName != 'INPUT'){
 		const dataList=document.getElementById('typeService');	
 		removeChildElement(dataList);
@@ -54,6 +55,7 @@ function populateData(service,evt){
 			option.value= items.charAt(0).toUpperCase()+items.slice(1);
 			dataList.appendChild(option);		
 		})
+		document.getElementById('search').value='';
 	}else{
 		displaySearchResult(service);
 		resultPanel('block');

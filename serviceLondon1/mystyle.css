@@ -4,11 +4,9 @@ form * {
 
 .group:before{ 
 	content: "\0020"; 
-	display: 
-	block; 
+	display:block; 
 	height: 0; 
-	overflow: 
-	hidden; 
+	overflow:hidden; 
 }
 
 .group:after { 
@@ -22,37 +20,21 @@ body {
 	height: 500px;
 	background: #42826C;
 	background: #42826C -webkit-linear-gradient(#002F32,#42826C) no-repeat;
-	/*background: #42826C -moz-linear-gradient(#002F32,#42826C) no-repeat;
-	background: #42826C -o-linear-gradient(#002F32,#42826C) no-repeat;
-	background: #42826C -ms-linear-gradient(#002F32,#42826C) no-repeat;
-	background: #42826C linear-gradient(#002F32,#42826C) no-repeat;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002F32', endColorstr='#42826C',GradientType=0 );*/
 }
 
 form {
 	width: 600px;
 	margin: 0 auto;
 	position: relative;
-	top: 50px;
 	padding: 20px 30px 5px 30px;
 	border: 5px solid #022E32;
 
 	background: #F9C35F;
 	background: url(checkeredpattern.png), -webkit-linear-gradient(#F9C35F, #A5C77F) no-repeat;
-	/*background: url(checkeredpattern.png), -moz-linear-gradient(#F9C35F, #A5C77F) no-repeat;
-	background: url(checkeredpattern.png), -o-linear-gradient(#F9C35F, #A5C77F) no-repeat;
-	background: url(checkeredpattern.png), -ms-linear-gradient(#F9C35F, #A5C77F) no-repeat;
-	background: url(checkeredpattern.png), linear-gradient(#F9C35F, #A5C77F) no-repeat;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F9C35F', endColorstr='#F9C35F',GradientType=0 );
-*/
+	
 	-webkit-border-radius: 10px;
-	/*-moz-border-radius: 10px;
-	border-radius: 10px;*/
-
+	
 	-webkit-box-shadow: inset 0px 1px 1px rgba(255,255,255,1), 0px 10px 15px rgba(0,0,0,.5);
-	/*-moz-box-shadow: inset 0px 1px 1px rgba(255,255,255,1), 0px 10px 15px rgba(0,0,0,.5);
-	box-shadow: inset 0px 1px 1px rgba(255,255,255,1), 0px 10px 15px rgba(0,0,0,.5);
-	*/
 }
 
 ol {
@@ -114,5 +96,30 @@ fieldset{
 	text-shadow: 0 1px 0px #FFF;
 	border-bottom: 1px solid rgb(76, 67, 65);
 	width: 550px;
+}
+.nav ul{
+	display: block;
+	width: 80%;
+	margin:0 auto;
+	margin-left: 55px;
+	margin-top: 50px;
+	max-width: 500px;
+	padding: 0;
+	padding-left: 20px;
+}
+.nav li{
+	list-style: none;
+	display: inline-block;
+	padding: 5px 10px;
+	margin-right: 5px;
+	color: #FFF;
+	font: bold 14px "Lucida Grande", Lucida, Verdana, sans-serif;
+	background: #93481A;
+
+	-webkit-border-radius:10px 10px 0 0;
+	cursor: pointer;
+	zoom: 1;
+
+	-webkit-box-shadow:inset 0 -3px 4px #6E3614;
 }
 
