@@ -99,11 +99,10 @@ fieldset{
 }
 .nav ul{
 	display: block;
-	width: 80%;
+	
 	margin:0 auto;
-	margin-left: 55px;
 	margin-top: 50px;
-	max-width: 500px;
+	max-width: 680px;
 	padding: 0;
 	padding-left: 20px;
 }
