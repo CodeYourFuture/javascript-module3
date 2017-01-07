@@ -1,0 +1,47 @@
+#load_screen{
+		background:#000;
+		opacity: 1;
+		position: fixed;
+		z-index:10;
+		top:50%;
+		left:50%;
+		width: 350px;
+		height: 30px;
+	}
+	#load_screen>#loading{
+		color:#FFF;
+		width: 120px;
+		height:24px;
+		margin:5px auto;
+	}
+	
+#area-Info{
+	width:70%;
+	float: right;
+}
+html{
+	background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTc1yK8wehFzuYL3INUitSzPzqPS_7AGYMvG0gNuQ22hj7Piep5");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+body{
+	max-width: 1000px;
+	margin:0px auto;
+}
+
+#divHeader{
+	width:100%;
+	height: 250px;
+	text-align: center;
+	background-image: url("http://qpastt.org.au/tbcwp1/wp-content/uploads/2014/05/Groups_images3.jpg");
+	background-size: 100% 100%;
+}
+h1{
+	padding: 30px;
+}
+#btnid{
+	width:100%;
+	height:25px;
+	background-color:#DAF7A6;
+}
