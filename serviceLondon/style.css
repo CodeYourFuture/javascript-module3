@@ -1,0 +1,175 @@
+
+/* define the style */
+body{
+	margin:2% auto; 
+	background-color: #645BDB;
+}
+
+.mainContainer {
+	width: 80%;
+	margin-left: 10%;
+	overflow: hidden;
+	background-color: #F6F6F7;
+	border-top-right-radius: 1em;
+	border-top-left-radius: 1em;
+
+}
+
+.header{
+	width: 100%;
+	height: 60px;
+	padding:1px;
+	
+}
+
+.searchPanel{
+	width: 500px;
+	height: 300px;
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border:2px solid gray;
+}
+/*
+section.sideMenu {
+	float: left;
+	margin: 10px 10px 10px 10px;
+	padding-bottom: 10px;
+	width: 200px;
+}
+.innerHeader{
+	background-color: #0b0249;
+	height: 40px;
+	padding: 1px;	
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px; 
+
+}
+.innerHeader h4{
+	margin: 10px;
+	color: white;
+	font-family: "Coda Caption";
+	font-size: 20px;
+	text-align: center;
+}
+
+#content{
+	float: left;
+	margin: 10px 5px 10px 10px;
+	width: 550px;
+}
+*/
+
+footer {
+	clear: both;
+	width: 100%;
+	height: 50px;
+	background-color: #0b0249;
+}
+.pStyle{
+	color: rgba(0, 0, 0, 0.90);
+	padding-left: 15px;	
+}
+.resultHeader{
+	background-color: #0b0249;
+	height: 30px;
+	padding: 1px;	
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px; 
+}
+.resultHeader p{
+	margin: 10px 0px 0px 10px;
+	font-family: "Coda Caption";
+	font-size: 16px;
+	color: white;
+}
+span{
+	font-weight: bold;
+	color: black;
+}
+header p{
+	font-family: "Coda Caption";
+	font-size: 24px;
+	color: black;
+	font-weight: bold;
+	margin-left: 10px;
+}
+.resultBox{
+	margin: 0px 1px 20px 10px
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+    -webkit-box-shadow: 0 1px 2px #777;
+	-moz-box-shadow: 0 2px 1px #777;
+	box-shadow: 0 2px 1px #777;
+}
+
+.button {
+	display: block;
+	height: 25px;
+	width: 190px;
+	margin: 5px 5px 5px 5px;
+	background: #1887e2;
+	border: 1px solid rgba(33, 68, 72, 0.59);
+	color: rgba(0, 0, 0, 0.80);
+	text-align: center;
+	font-family: "Coda Caption";
+	font-size: 18px;
+	border-top-left-radius:8px; 
+	border-top-right-radius:8px; 
+	border-bottom-left-radius:2px;
+	border-bottom-right-radius:2px; 
+}
+ 
+a.button {
+	text-decoration: none;
+}
+a:hover{
+	background-color: #f7f9f5;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #645BDB;*/
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    font-family: "Coda Caption";
+	font-size: 15px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #0b0249;
+}
+
+.overlay{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.7);
+	width: 100%;
+	height:100%;
+	z-index: 5000;
+}
+.overlay h1{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0 auto;
+	margin-top: 300px;
+}
+
+
+
+

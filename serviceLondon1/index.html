@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Service in London</title>
+	<link rel="stylesheet"	href="mystyle.css" />
+</head>
+<body>
+	<div class="nav">
+		<ul>
+			<li>Search</li>
+			<li>About Us</li>
+		</ul>
+	</div>
+
+	<form name="mainForm" class="group" action="#">
+		<ol>
+			<li class="group">
+				<legend>Advanced Search</legend>
+			</li>
+			<li class="group">
+				<label for="chooseType">Search option</label>
+				<select id="chooseType" name="chooseType">
+					<option>Select...</option>
+					<option value="type">By service type</option>
+					<option value="area">By service area</option>
+					<option value="clients">By service clients</option>
+				</select>
+			</li>
+			<li class="group">
+				<input type="text" id='search' list="typeService" placeholder="search..." autocomplete="on" name="searchField">
+				<datalist id="typeService" name="typeService"></datalist>
+			</li>
+		</ol>
+		<div id="searchResult" ></div>
+	</form>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
