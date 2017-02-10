@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Syncopate:400,700');
+
+/* In progress bar*/
+body{
+	margin:0 auto;
+	background-color: #F2E6E1;
+}
+
+.spinner{
+	width: 80px;
+	height:80px;
+	border: 2px solid #b1b9c2;
+	border-top: 3px solid #ffffff;
+	border-radius: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	animation: spin 1s infinite linear; 
+}
+
+@keyframes spin{
+	from{
+		transform:
+		rotate(0deg);
+	}
+	to{
+		transform:
+		rotate(360deg);
+	}
+}
+
+#overlay{
+	height:100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	position: fixed;
+	left:0px;
+	right:0px;
+
+}
+
+h1{
+	font-family: 'Syncopate', sans-serif;
+	font-weight: 700;
+	font-size: 40px;
+	padding:18px; 
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 2px 0 2px 0;
+	-webkit-text-stroke: 0.5px #000;
+	-webkit-text-fill-color: #000;
+}
+
+h3{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	text-align: center;
+	color: #b1b9c2;
+	text-transform: uppercase;
+}
+
+#header{
+	margin-top: 0px;
+	padding:20px 0px 90px 0px;
+	background: url('http://i.imgur.com/5KZUUMC.png') no-repeat;
+	height:100px;
+	z-index: -1;
+}
+
+#wrapper{
+	margin-left: 10%;
+	margin-right: 5%;
+}
+
+button {
+	background-color: #9d1c89;
+	font-family: 'Quicksand', sans-serif;
+	margin-bottom: 3px;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 15px 32px;
+	width: 300px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+button:hover { 
+	background-color: rgb(66, 196, 212);
+}
+
+#displayServices> h2 {
+	font-family: 'Quicksand', sans-serif;
+	text-transform: uppercase;
+	background-color: #d580c4;
+	margin-top: 0px;
+	margin-bottom: 8px;
+	text-align: center;
+	border-radius: 5px 5px 0px 0px;
+	padding: 5px 10px 5px 10px;
+	padding-bottom: 5px;
+	box-shadow: 1px 2px 2px 1px;
+}
+
+#displayAreas{
+	width: 320px;
+	margin: 0px;
+	float: left;
+	clear: both;
+}
+
+#displayServices{
+	font-size: 16px;
+	font-family:'Quicksand', sans-serif;
+	float: left;
+	width: 500px;
+	border-radius: 5px;
+	
+}
+
+#displayServices> box>div{
+	background-color: #f7e6f3;
+	border-radius: 0px 0px 5px 5px;
+	padding: 5px 10px 5px 15px;
+	margin-bottom: 15px;
+	box-shadow: 1px 2px 2px 1px;
+
+}
+
+p{
+	margin: 4px;
+}
+
+footer{
+	padding-top: 20px;
+	font-family: "arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+}
+
+em{
+	color: #F00;
+	font-style: normal;
+}
+.clearfix{
+	clear: both;
+}
